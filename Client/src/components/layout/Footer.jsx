@@ -39,7 +39,7 @@ export default function Footer({ profile, onOpenContact }) {
               LinkedIn
             </a>
             <button onClick={() => onOpenContact("cv")} className="hover:text-emerald-500 transition-colors">
-              Request CV
+              CV
             </button>
           </div>
         </div>
