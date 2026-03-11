@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { PROJECTS, PROFILE } from "../data/portfolioData";
+import { CV_DOWNLOAD_URL } from "../config/env";
 import Navbar from "../components/layout/Navbar.jsx";
 import Footer from "../components/layout/Footer.jsx";
 import ProjectsSection from "../components/sections/ProjectsSection.jsx";
@@ -10,7 +11,7 @@ export default function ProjectsPage() {
 
   const handleFooterContact = (type) => {
     if (type === "cv") {
-      window.open("/cv.pdf", "_blank", "noopener,noreferrer");
+      window.open(CV_DOWNLOAD_URL, "_blank", "noopener,noreferrer");
       return;
     }
     window.location.href = `mailto:${PROFILE.email}`;
@@ -32,7 +33,7 @@ export default function ProjectsPage() {
         scrolled={scrolled}
         isDark={isDark}
         onToggleDark={() => setIsDark(!isDark)}
-        onCvDownload={() => window.open("/cv.pdf", "_blank", "noopener,noreferrer")}
+        onCvDownload={() => window.open(CV_DOWNLOAD_URL, "_blank", "noopener,noreferrer")}
         brandLabel="Al Rafi"
         links={[{ href: "#/", label: "Home" }]}
       />
